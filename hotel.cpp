@@ -3,6 +3,16 @@
 
 using namespace std;
 
+/* Cross-platform clear screen
+https://stackoverflow.com/questions/228617/ */
+void clear_screen() {
+  #ifdef _WIN32
+    system("cls");
+  #else
+    system("clear");
+  #endif
+}
+
 void mainMenu() {
   cout << "1. Fitur1" << "\n";
   cout << "2. Fitur2" << "\n";
@@ -25,11 +35,11 @@ void choice() {
       // Fitur 3
       break;
     case 4:
-      system("CLS");
+      clear_screen();
       exit(0);
       break;
     default:
-      system("CLS");
+      clear_screen();
       cout << "ERROR : Masukan pilihan yang benar" << endl;
       mainMenu();
       choice();
@@ -38,7 +48,7 @@ void choice() {
 }
 
 int main() {
-  system("CLS");
+  clear_screen();
   cout << "Selamat datang ke Aplikasi Managemen Hotel\n" << endl;
   mainMenu();
   choice();
