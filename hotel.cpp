@@ -41,6 +41,13 @@ void choice() {
     default:
       clear_screen();
       cout << "ERROR : Masukan pilihan yang benar" << endl;
+
+      /* Fix infinite cout if user entered other than int. 
+      https://stackoverflow.com/questions/23162950/ */
+      cin.clear();
+      string discard;
+      getline(cin, discard);
+
       mainMenu();
       choice();
       break;
