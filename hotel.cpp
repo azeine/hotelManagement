@@ -20,20 +20,23 @@ void mainMenu() {
   cout << "4. Exit" << endl;
 }
 
+void about() {
+  clear_screen();
+  cout << "Kami Kelompok 4 \n";
+  cout << "1. Azis \n";
+  cout << "2. Rifki \n";
+  cout << "3. Rafki \n";
+  cout << "4. Sahel \n";
+  cout << "5. Rivaldy\n";
+}
+ 
 void choice() {
   cout << "Masukan Pilihan: ";
   int inp = 0;
   cin >> inp;
   switch (inp) {
     case 1:
-      if(inp == 1){
-        cout << "Kami Kelompok 4 \n";
-        cout << "1. Azis \n";
-        cout << "2. Rifki \n";
-        cout << "3. Rafki \n";
-        cout << "4. Sahel \n";
-        cout << "5. Rivaldy\n";
-      }
+      about();
       break;
     case 2:
       // Fitur 2
