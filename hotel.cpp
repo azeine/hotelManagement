@@ -14,7 +14,7 @@ void clear_screen() {
 }
 
 void mainMenu() {
-  cout << "1. Fitur1" << "\n";
+  cout << "1. Tentang Kami" << "\n";
   cout << "2. Fitur2" << "\n";
   cout << "3. Fitur3" << "\n";
   cout << "4. Exit" << endl;
@@ -26,7 +26,14 @@ void choice() {
   cin >> inp;
   switch (inp) {
     case 1:
-      // Fitur 1
+      if(inp == 1){
+        cout << "Kami Kelompok 4 \n";
+        cout << "1. Azis \n";
+        cout << "2. Rifki \n";
+        cout << "3. Rafki \n";
+        cout << "4. Sahel \n";
+        cout << "5. Rivaldy\n";
+      }
       break;
     case 2:
       // Fitur 2
